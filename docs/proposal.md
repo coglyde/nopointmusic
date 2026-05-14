@@ -1,24 +1,10 @@
 # nopointmusic.com — Digital Presence Approach
 
-*Footer on every slide: `Coglyde · 2026` (bottom-left) · page number (bottom-center) · `2026` (bottom-right). Mirrors the Coglyde sales deck template.*
+*Coglyde · 2026*
 
 ---
 
-## Slide 1 — Cover
-
-NOPOINTMUSIC
-
-**COGLYDE**
-
-Digital Presence Approach
-
-2026
-
-`Coglyde · 2026`
-
----
-
-## Slide 2 — Content
+## Content
 
 - The Vision
 - Site Map
@@ -32,11 +18,9 @@ Digital Presence Approach
 - vs. Website Builders
 - Add-ons
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 3 — The Vision
+## The Vision
 
 **Home — the deck.** Top-down luxury turntable. Silver plinth, brass tonearm, vinyl engraved with the nopointmusic logo. Vinyl spins on scroll. Tonearm is the navigation — hover peeks, click swings and routes. 33/45 speed knob.
 
@@ -44,11 +28,9 @@ Digital Presence Approach
 
 Art for art. Every event, release, and broadcast treated as art. Outbound to streaming, YouTube, and tickets. Merch sells direct via Stripe.
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 4 — Site Map
+## Site Map
 
 ```
 /                  Home — the deck
@@ -63,11 +45,9 @@ Art for art. Every event, release, and broadcast treated as art. Outbound to str
 
 Plus a branded 404.
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 5 — Per-Page Scope (1/2)
+## Per-Page Scope (1/2)
 
 **Home**
 - The deck hero
@@ -91,11 +71,9 @@ Plus a branded 404.
 - List of broadcasts
 - Per broadcast: episode info, date, description, YouTube link
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 6 — Per-Page Scope (2/2)
+## Per-Page Scope (2/2)
 
 **Foundations**
 - Manifesto / about
@@ -119,11 +97,9 @@ Plus a branded 404.
 **404**
 - Branded not-found
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 7 — Backend & Media Storage
+## Backend & Media Storage
 
 **Media — AWS S3 + CloudFront CDN**
 - Event photos, release covers, blog images, product shots
@@ -139,11 +115,9 @@ Plus a branded 404.
 
 **Alternative:** Cloudinary (managed CDN, ~25 GB free tier). Decided in discovery.
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 8 — E-commerce Setup (Merch)
+## E-commerce Setup (Merch)
 
 **Included**
 - Stripe Checkout (hosted, PCI-compliant)
@@ -165,11 +139,9 @@ Shopify platform fees: $468 / year. Custom: $0 / year.
 
 5-year saving on platform fees: **$2,340+**.
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 9 — SEO Strategy
+## SEO Strategy
 
 **Technical (one-time setup)**
 - XML sitemap, robots.txt, canonical tags
@@ -188,11 +160,9 @@ Shopify platform fees: $468 / year. Custom: $0 / year.
 - Targeted to real Vancouver electronic music queries
 - Editorial value, no keyword stuffing
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 10 — Process
+## Process
 
 1. **Discovery** — Kickoff, brand alignment, content inventory, sitemap lock.
 2. **Direction** — Type system, color, asset prompts, two production-fidelity static frames.
@@ -202,11 +172,9 @@ Shopify platform fees: $468 / year. Custom: $0 / year.
 6. **Handover** — Walk-through call + written guide.
 7. **Post-launch (30 days)** — Bug fixes + small adjustments included.
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 11 — Breakdown (1/3) · Hero & Site Pages
+## Breakdown (1/3) · Hero & Site Pages
 
 | Item | Qty | Price/Qty | Description |
 |---|---|---|---|
@@ -224,11 +192,9 @@ Shopify platform fees: $468 / year. Custom: $0 / year.
 
 Subtotal: **$5,350**
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 12 — Breakdown (2/3) · Backend, Media, E-commerce
+## Breakdown (2/3) · Backend, Media, E-commerce
 
 | Item | Qty | Price/Qty | Description |
 |---|---|---|---|
@@ -244,11 +210,9 @@ Subtotal: **$5,350**
 
 Subtotal: **$3,000**
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 13 — Breakdown (3/3) · SEO, Performance, Launch
+## Breakdown (3/3) · SEO, Performance, Launch
 
 | Item | Qty | Price/Qty | Description |
 |---|---|---|---|
@@ -262,11 +226,9 @@ Subtotal: **$3,000**
 
 Subtotal: **$1,850**
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 14 — Total Cost
+## Total Cost
 
 ### **$10,200 one-time**
 or
@@ -277,11 +239,9 @@ or
 - May increase modestly with storage / bandwidth growth
 - Typically under $50 / month at this scale
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 15 — vs. Website Builders
+## vs. Website Builders
 
 2026 pricing, verified on each platform.
 
@@ -314,11 +274,9 @@ or
 - Lower per-transaction — Stripe only, no platform cut.
 - Designed to grow — pages and features don't require a plan upgrade.
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 16 — Add-Ons (Optional)
+## Add-Ons (Optional)
 
 | Option | Price | Included |
 |---|---|---|
@@ -328,11 +286,9 @@ or
 | Additional Blog Articles | $125 / each | Same standard as the initial 4. |
 | Email Marketing Setup | $400 one-time | Newsletter form + automation (Resend / Loops). |
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 17 — Timeline
+## Timeline
 
 **6–7 weeks wall-clock.**
 
@@ -346,23 +302,15 @@ or
 | 6 | SEO, performance, accessibility, cross-browser. Polish. |
 | 7 | Content seeded, deploy, launch, training handover. |
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 18 — Next Steps
+## Next Steps
 
 1. Walk through this together, mark anything that doesn't fit.
 2. Confirm scope + payment plan.
 3. One-page agreement (scope, payments, IP, portfolio rights).
 4. Kickoff.
 
-`Coglyde · 2026`
-
 ---
 
-## Slide 19 — Thank You
-
 **nopointmusic × Coglyde**
-
-`Coglyde · 2026`
