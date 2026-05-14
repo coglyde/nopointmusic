@@ -14,7 +14,7 @@ export default function Home() {
         <div className="text-right font-mono text-[0.65rem] uppercase tracking-[0.3em] text-ink-soft leading-relaxed">
           based in vancouver
           <br />
-          est. 2017
+          est. 2024
         </div>
       </header>
 

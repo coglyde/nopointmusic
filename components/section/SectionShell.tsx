@@ -16,7 +16,7 @@ export function SectionShell({ title, children }: Props) {
         <div className="text-right leading-relaxed">
           based in vancouver
           <br />
-          est. 2017
+          est. 2024
         </div>
       </header>
 

@@ -83,13 +83,13 @@ Howler is installed; not yet wired.
 
 ## Asset pipeline
 
-The deck is composed of three transparent PNG layers in `public/deck/`:
+The deck is composed of three custom asset layers in `public/deck/`:
 
-1. **`vinyl.png`** — black record with the brand engraved as machined silver inlay. Generated via ChatGPT image with the engraving prompt (see `docs/prompts/`). Logo is the official wordmark.
-2. **`plinth.png`** — walnut + brass turntable base, top-down, empty platter well on the left, brass tonearm mount upper-right, recessed 33/45 knob bottom-left. Generated to match the vinyl's lighting.
-3. **`arm.png`** — isolated brushed brass S-shaped tonearm. Pivot at top-center, headshell at bottom-left. Pure white background for clean masking.
+1. **`vinyl.png`** — black record with the brand engraved as machined silver inlay across the playable surface. Logo is the official wordmark.
+2. **`plinth.png`** — silver titanium turntable base with warm yellow gold hardware: platter well, tonearm mount, recessed 33/45 dial.
+3. **`arm.png`** — yellow gold S-shaped tonearm with diamond stylus headshell. Pivot at top-center.
 
-All three composited at runtime. Sizes and positions live in `lib/deck-geometry.ts`.
+All three composited at runtime as separate transformable layers. Sizes and positions live in `lib/deck-geometry.ts`. Production reference for reproducing the look lives in `docs/prompts/`.
 
 ## Geometry (single source of truth: `lib/deck-geometry.ts`)
 

@@ -9,6 +9,15 @@
   --accent: #e51b18;
 }
 
+[data-theme="dark"] {
+  --cream: #282828;
+  --cream-deep: #1f1f1f;
+  --ink: #efeae0;
+  --ink-soft: #9a8e7d;
+  --brass: #c9a05c;
+  --accent: #e51b18;
+}
+
 @theme inline {
   --color-cream: var(--cream);
   --color-cream-deep: var(--cream-deep);
