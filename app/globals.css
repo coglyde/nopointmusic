@@ -7,15 +7,22 @@
   --ink-soft: #5a5048;
   --brass: #b08947;
   --accent: #e51b18;
+  /* Footer engraving, a hair LIGHTER than cream-deep so the wordmark reads as
+     a faint deboss on light. */
+  --engrave: #f4efe6;
 }
 
 [data-theme="dark"] {
-  --cream: #282828;
-  --cream-deep: #1f1f1f;
+  /* Near-black to match the always-dark navbar (bg-black/40), so the page and
+     header read as one cohesive surface instead of two greys. */
+  --cream: #161616;
+  --cream-deep: #0f0f0f;
   --ink: #efeae0;
   --ink-soft: #9a8e7d;
   --brass: #c9a05c;
   --accent: #e51b18;
+  /* Dark grey, just above the near-black bg, same faint-deboss read on dark. */
+  --engrave: #242424;
 }
 
 @theme inline {
@@ -27,6 +34,13 @@
   --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-hand: var(--font-hand);
+}
+
+/* Handwriting, scoped to instant-print captions only. */
+.font-hand {
+  font-family: var(--font-hand), "Bradley Hand", cursive;
+  font-weight: 600;
 }
 
 html,
@@ -37,6 +51,34 @@ body {
 
 body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Header wordmark: white art on dark backgrounds, black art on light. Default
+   (dark theme) shows white; light theme shows black; over the hero video it's
+   forced white regardless of theme. */
+.site-logo .logo-dark-bg {
+  display: block;
+}
+.site-logo .logo-light-bg {
+  display: none;
+}
+[data-theme="light"] .site-logo .logo-dark-bg {
+  display: none;
+}
+[data-theme="light"] .site-logo .logo-light-bg {
+  display: block;
+}
+.site-logo.over-video .logo-dark-bg {
+  display: block;
+}
+.site-logo.over-video .logo-light-bg {
+  display: none;
+}
+
+/* Footer engraving wordmark, tone-on-tone, a faint deboss that sits just
+   off the background colour in either theme. */
+.text-engrave {
+  color: var(--engrave);
 }
 
 @keyframes vinyl-spin {

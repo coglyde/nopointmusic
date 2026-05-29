@@ -28,7 +28,7 @@ export function CursorIcon({ Icon }: Props) {
         }`}
       >
         {Icon ? (
-          <Icon className="h-7 w-7 text-white" strokeWidth={2} />
+          <Icon className="h-12 w-12 text-white" strokeWidth={1.75} />
         ) : null}
       </div>
     </div>

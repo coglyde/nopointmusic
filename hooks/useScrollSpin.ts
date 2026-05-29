@@ -2,7 +2,7 @@
 
 import { useEffect, type RefObject } from "react";
 
-// Rotates an element in proportion to the page scroll position — the record
+// Rotates an element in proportion to the page scroll position, the record
 // spins as you scroll and rests when you stop. Writes `transform` on a rAF so
 // it stays smooth.
 export function useScrollSpin(

@@ -9,7 +9,7 @@ import {
 // readable over any frame without hiding the footage.
 export function HeroVideo() {
   return (
-    <div className="absolute inset-0 -z-10 overflow-hidden bg-[#0c0a08]">
+    <div className="absolute inset-0 z-0 overflow-hidden bg-[#0c0a08]">
       <video
         className="h-full w-full object-cover"
         poster={HERO_POSTER_URL}
