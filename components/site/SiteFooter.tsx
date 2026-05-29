@@ -106,7 +106,7 @@ export function SiteFooter() {
           the footer's bottom edge. Set in the body black weight. */}
       <span
         aria-hidden
-        className="text-engrave pointer-events-none absolute inset-x-0 bottom-0 z-0 block translate-y-[8%] select-none whitespace-nowrap text-center text-[17vw] font-black leading-[0.74] tracking-[-0.05em] sm:translate-y-[20%] sm:text-[15.5vw]"
+        className="text-engrave pointer-events-none absolute inset-x-0 bottom-0 z-0 block translate-y-[6%] select-none whitespace-nowrap text-center text-[13vw] font-black leading-[0.74] tracking-[-0.05em] sm:translate-y-[20%] sm:text-[15.5vw]"
       >
         nopointmusic
       </span>
