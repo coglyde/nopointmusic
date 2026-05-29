@@ -7,15 +7,13 @@ import { NAV_ITEMS } from "@/lib/nav";
 type Props = {
   // Reports which item is hovered so the parent can morph the cursor.
   onActive: (Icon: LucideIcon | null) => void;
-  cursorHidden: boolean;
 };
 
-export function HeroMenu({ onActive, cursorHidden }: Props) {
+export function HeroMenu({ onActive }: Props) {
   return (
     <nav
       aria-label="Primary"
       onMouseLeave={() => onActive(null)}
-      style={{ cursor: cursorHidden ? "none" : undefined }}
       className="flex flex-col"
     >
       {NAV_ITEMS.map((item, i) => (
@@ -25,7 +23,8 @@ export function HeroMenu({ onActive, cursorHidden }: Props) {
           onMouseEnter={() => onActive(item.Icon)}
           onFocus={() => onActive(item.Icon)}
           onBlur={() => onActive(null)}
-          className="group flex items-baseline gap-4 py-0.5"
+          // Hide the native pointer over the word so the icon-cursor stands in.
+          className="group flex items-baseline gap-4 py-0.5 md:cursor-none"
         >
           <span className="font-mono text-xs tabular-nums text-white/45 transition-colors group-hover:text-accent">
             {String(i + 1).padStart(2, "0")}

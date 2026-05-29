@@ -18,7 +18,7 @@ export function Hero() {
       <HeroBar />
 
       <div className="flex flex-1 items-center px-6 pb-24 sm:px-10">
-        <HeroMenu onActive={setIcon} cursorHidden={Icon !== null} />
+        <HeroMenu onActive={setIcon} />
       </div>
 
       <p className="pointer-events-none absolute bottom-7 left-0 right-0 text-center font-mono text-[0.65rem] uppercase tracking-[0.3em] text-white/50">
