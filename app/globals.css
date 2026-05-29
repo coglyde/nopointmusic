@@ -38,3 +38,20 @@ body {
 body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
+
+@keyframes vinyl-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-vinyl-spin {
+  animation: vinyl-spin linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-vinyl-spin {
+    animation: none;
+  }
+}

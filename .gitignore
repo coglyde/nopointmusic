@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# redundant video source (optimized copies live in public/video)
+/public/clips/*.MOV
+/public/clips/*.mov
