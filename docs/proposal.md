@@ -1,4 +1,4 @@
-# nopointmusic.com — Digital Presence Approach
+# nopointmusic.com - Digital Presence Approach
 
 *Coglyde · 2026*
 
@@ -22,7 +22,7 @@
 
 ## The Vision
 
-**Home — the deck.** Top-down luxury turntable. Silver plinth, brass tonearm, vinyl engraved with the nopointmusic logo. Vinyl spins on scroll. Tonearm is the navigation — hover peeks, click swings and routes. 33/45 speed knob.
+**Home - the deck.** Top-down luxury turntable. Silver plinth, brass tonearm, vinyl engraved with the nopointmusic logo. Vinyl spins on scroll. Tonearm is the navigation - hover peeks, click swings and routes. 33/45 speed knob.
 
 **Everything else.** Cream background. Restrained typography. Generous whitespace. Mono metadata labels. Brand red `#e51b18` reserved for accents.
 
@@ -33,7 +33,7 @@ Art for art. Every event, release, and broadcast treated as art. Outbound to str
 ## Site Map
 
 ```
-/                  Home — the deck
+/                  Home - the deck
 /music             Releases
 /events            Upcoming + Past
 /radio             Broadcasts
@@ -101,7 +101,7 @@ Plus a branded 404.
 
 ## Backend & Media Storage
 
-**Media — AWS S3 + CloudFront CDN**
+**Media - AWS S3 + CloudFront CDN**
 - Event photos, release covers, blog images, product shots
 - Global delivery via CloudFront
 - $0.023/GB storage, $0.085/GB bandwidth
@@ -164,13 +164,13 @@ Shopify platform fees: $468 / year. Custom: $0 / year.
 
 ## Process
 
-1. **Discovery** — Kickoff, brand alignment, content inventory, sitemap lock.
-2. **Direction** — Type system, color, asset prompts, two production-fidelity static frames.
-3. **Build** — Deck hero, then sections in parallel. Backend + admin alongside.
-4. **Polish** — Cross-browser, accessibility, performance. Two revision rounds.
-5. **Launch** — Deploy, content seeded, 4 blog articles, Stripe live mode.
-6. **Handover** — Walk-through call + written guide.
-7. **Post-launch (30 days)** — Bug fixes + small adjustments included.
+1. **Discovery** - Kickoff, brand alignment, content inventory, sitemap lock.
+2. **Direction** - Type system, color, asset prompts, two production-fidelity static frames.
+3. **Build** - Deck hero, then sections in parallel. Backend + admin alongside.
+4. **Polish** - Cross-browser, accessibility, performance. Two revision rounds.
+5. **Launch** - Deploy, content seeded, 4 blog articles, Stripe live mode.
+6. **Handover** - Walk-through call + written guide.
+7. **Post-launch (30 days)** - Bug fixes + small adjustments included.
 
 ---
 
@@ -180,7 +180,7 @@ Shopify platform fees: $468 / year. Custom: $0 / year.
 |---|---|---|---|
 | Discovery & Strategy | 1 | $200 | Kickoff, content audit, sitemap lock, brand alignment. |
 | Brand Guidelines (Colors, Typography) | 1 | $350 | Type system, color palette, accent rules. |
-| Custom Asset Production (Vinyl, Plinth, Tonearm) | 1 | $900 | Multiple art direction rounds — vinyl engraving studies, plinth material and finish exploration (silver titanium with yellow gold accents), tonearm color matching across the set, retouching, production-ready masters. |
+| Custom Asset Production (Vinyl, Plinth, Tonearm) | 1 | $900 | Multiple art direction rounds - vinyl engraving studies, plinth material and finish exploration (silver titanium with yellow gold accents), tonearm color matching across the set, retouching, production-ready masters. |
 | **Custom Deck Hero Interaction** | 1 | **$1,800** | Bespoke top-down turntable: scroll-spun vinyl, hover-peek + click-swing tonearm, 33/45 speed knob, accessibility parallel, mobile fallback. |
 | Home Page Layout | 1 | $300 | Layout, hero placement, intro section, latest-content teasers, footer. |
 | Music Page | 1 | $300 | Releases list with cover, title, artist, release date, streaming links. |
@@ -202,7 +202,7 @@ Subtotal: **$5,350**
 | Event Photo Upload Automation | 1 | $400 | Folder-based upload → site auto-displays. Same flow for releases, blog, products. |
 | Stripe Checkout Integration | 1 | $400 | Hosted checkout, payment processing, secure card handling. |
 | Order Webhook + Database | 1 | $300 | Capture order events, persist to Postgres. |
-| Order Confirmation Email Automation | 1 | $200 | Resend + React Email — order confirmation + shipping notification. |
+| Order Confirmation Email Automation | 1 | $200 | Resend + React Email - order confirmation + shipping notification. |
 | Admin: Orders Dashboard | 1 | $300 | Fulfillment view, order detail, mark-as-shipped, CSV export. |
 | Admin: Content Editor (CMS) | 1 | $600 | Edit events, releases, broadcasts, blog posts, products. |
 | Blog Index + Article Template | 1 | $400 | Reusable architecture, index view, article reading layout. |
@@ -258,7 +258,7 @@ or
 - Shopify Basic (external processor): +2%
 - Webflow Standard: +2%
 - Wix (external providers): variable
-- Custom: nothing — just Stripe
+- Custom: nothing - just Stripe
 
 **5-year math (monthly only)**
 
@@ -268,11 +268,11 @@ or
 | Custom (this proposal) | **$1,800** |
 
 **What the custom site gets you that builders can't**
-- A site no one else has — the deck hero is a portfolio piece, not a template.
-- Yours forever — own the code, take it anywhere, no lock-in.
-- Faster — no theme bloat.
-- Lower per-transaction — Stripe only, no platform cut.
-- Designed to grow — pages and features don't require a plan upgrade.
+- A site no one else has - the deck hero is a portfolio piece, not a template.
+- Yours forever - own the code, take it anywhere, no lock-in.
+- Faster - no theme bloat.
+- Lower per-transaction - Stripe only, no platform cut.
+- Designed to grow - pages and features don't require a plan upgrade.
 
 ---
 

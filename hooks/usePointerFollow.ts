@@ -3,7 +3,7 @@
 import { useEffect, type RefObject } from "react";
 
 // Makes an element track the pointer by writing `transform` directly on each
-// mousemove — no React state, so it stays smooth at 60fps.
+// mousemove - no React state, so it stays smooth at 60fps.
 export function usePointerFollow(ref: RefObject<HTMLElement | null>) {
   useEffect(() => {
     const el = ref.current;
