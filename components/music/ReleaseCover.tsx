@@ -7,14 +7,14 @@ type Props = {
 
 // Square cover for a release. Uses the supplied art when present; otherwise
 // falls back to the engraved vinyl asset with the catalogue number stamped
-// over it - so an un-art'd release still looks intentional, not broken.
+// over it, so an un-art'd release still looks intentional, not broken.
 export function ReleaseCover({ release }: Props) {
   if (release.cover) {
     return (
       <div className="relative aspect-square w-full overflow-hidden bg-cream-deep">
         <Image
           src={release.cover}
-          alt={`${release.title} - ${release.artist}`}
+          alt={`${release.title}, ${release.artist}`}
           fill
           sizes="(min-width: 640px) 160px, 96px"
           className="object-cover"

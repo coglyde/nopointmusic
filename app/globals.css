@@ -7,7 +7,7 @@
   --ink-soft: #5a5048;
   --brass: #b08947;
   --accent: #e51b18;
-  /* Footer engraving — a hair LIGHTER than cream-deep so the wordmark reads as
+  /* Footer engraving, a hair LIGHTER than cream-deep so the wordmark reads as
      a faint deboss on light. */
   --engrave: #f4efe6;
 }
@@ -21,7 +21,7 @@
   --ink-soft: #9a8e7d;
   --brass: #c9a05c;
   --accent: #e51b18;
-  /* Dark grey, just above the near-black bg — same faint-deboss read on dark. */
+  /* Dark grey, just above the near-black bg, same faint-deboss read on dark. */
   --engrave: #242424;
 }
 
@@ -75,7 +75,7 @@ body {
   display: none;
 }
 
-/* Footer engraving wordmark — tone-on-tone, a faint deboss that sits just
+/* Footer engraving wordmark, tone-on-tone, a faint deboss that sits just
    off the background colour in either theme. */
 .text-engrave {
   color: var(--engrave);

@@ -2,7 +2,7 @@
 //
 // The @nopointmusic profile sits behind a login wall, so we can't scrape the
 // "latest" posts server-side. Instead we render a curated poster wall from the
-// list below - the collective picks their strongest posts, which is the look
+// list below, the collective picks their strongest posts, which is the look
 // we want anyway. Each tile links out to the real post.
 //
 // To add a post:

@@ -1,8 +1,8 @@
-// Events - A-side (upcoming) and B-side (past). One flat list; the page splits
+// Events, A-side (upcoming) and B-side (past). One flat list; the page splits
 // and sorts it against the current date, so an event auto-archives simply by
 // its date passing.
 //
-// Past nights are REAL - Platform9, Village Studios, Prospect Point, NYE - // each linked to its captured set/recap on YouTube via `videoId`. The upcoming
+// Past nights are REAL, Platform9, Village Studios, Prospect Point, NYE, // each linked to its captured set/recap on YouTube via `videoId`. The upcoming
 // entry is a sample placeholder (the label swaps in real dates + ticket links).
 
 export type NpEvent = {
@@ -14,7 +14,7 @@ export type NpEvent = {
   city: string;
   lineup: readonly string[];
   description: string;
-  // Outbound ticketing - Eventbrite / RA / etc. Upcoming only.
+  // Outbound ticketing, Eventbrite / RA / etc. Upcoming only.
   ticket?: string;
   // Real captured set/recap on YouTube (past nights).
   videoId?: string;
@@ -30,7 +30,7 @@ export const EVENTS: readonly NpEvent[] = [
     city: "Vancouver",
     lineup: ["Gentt", "Cenk Saraç", "Mr. Stee"],
     description:
-      "One room, one system, doors at ten. No headliner billing - the music does the talking. Capacity is the room, and when it's gone it's gone.",
+      "One room, one system, doors at ten. No headliner billing. The music does the talking. Capacity is the room, and when it's gone it's gone.",
     ticket: "https://www.eventbrite.com/o/no-point-music-75064910763",
   },
 

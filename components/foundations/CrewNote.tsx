@@ -1,4 +1,4 @@
-// The who — collective-spirit copy in No Point's own words. Closes the
+// The who, collective-spirit copy in No Point's own words. Closes the
 // Foundations page: after the why (manifesto) and the where (Platform 9), this
 // is the crew behind it. Wider type, left rail, a closing red marker.
 export function CrewNote() {
@@ -11,7 +11,7 @@ export function CrewNote() {
 
       <div className="space-y-6 text-lg leading-[1.7] text-ink">
         <p>
-          No Point Music is built on a collective spirit — creating freely,
+          No Point Music is built on a collective spirit: creating freely,
           without limits, and staying true to sound. It&apos;s about shaping
           electronic music in a way that feels genuine, whether through DJ sets,
           live recordings, or the experiences that surround them. More than
@@ -20,8 +20,8 @@ export function CrewNote() {
         </p>
         <p className="text-ink-soft">
           Born out of shared passion, No Point Music keeps growing as a space
-          for connection, expression, and new ideas. Everything we share —
-          music, visuals, gatherings — comes from within the crew, carving our
+          for connection, expression, and new ideas. Everything we share,
+          music, visuals, gatherings, comes from within the crew, carving our
           own path and pushing boundaries while keeping it raw and real.
         </p>
       </div>

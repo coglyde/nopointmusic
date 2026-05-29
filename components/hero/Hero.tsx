@@ -7,8 +7,8 @@ import { HeroMenu } from "./HeroMenu";
 import { HeroSocials } from "./HeroSocials";
 import { CursorIcon } from "./CursorIcon";
 
-// The hero owns one piece of state - which menu icon the cursor is currently
-// wearing - and wires the video, menu, and cursor together. The persistent top
+// The hero owns one piece of state, which menu icon the cursor is currently
+// wearing, and wires the video, menu, and cursor together. The persistent top
 // bar lives in SiteHeader, above this section.
 export function Hero() {
   const [Icon, setIcon] = useState<LucideIcon | null>(null);
@@ -21,7 +21,12 @@ export function Hero() {
         <HeroMenu onActive={setIcon} />
       </div>
 
-      <p className="pointer-events-none absolute bottom-7 left-0 right-0 z-10 text-center font-mono text-[0.65rem] uppercase tracking-[0.3em] text-white/50">
+      {/* Desktop: centered along the bottom. Mobile: bottom-right, opposite the
+          bottom-left social icons. */}
+      <p className="pointer-events-none absolute bottom-7 left-0 right-0 z-10 hidden text-center font-mono text-[0.65rem] uppercase tracking-[0.3em] text-white/50 sm:block">
+        art for art
+      </p>
+      <p className="pointer-events-none absolute bottom-7 right-6 z-10 font-mono text-[0.6rem] uppercase tracking-[0.3em] text-white/50 sm:hidden">
         art for art
       </p>
 

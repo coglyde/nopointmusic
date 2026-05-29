@@ -1,5 +1,5 @@
 // Outbound homes for the collective. These are the real channels pulled from
-// nopointmusic.com - everything on the site links *out* to one of these rather
+// nopointmusic.com, everything on the site links *out* to one of these rather
 // than hosting media directly. Editing this file updates every footer and
 // "follow" strip at once.
 

@@ -8,7 +8,7 @@ type Props = {
 
 // Renders one or more public Instagram posts using the official embed markup.
 // Instagram's embed.js (loaded by the hook) swaps each blockquote for the live
-// post. Render-only beyond that - content and styling are Instagram's iframe.
+// post. Render-only beyond that, content and styling are Instagram's iframe.
 export function InstagramEmbed({ permalinks }: Props) {
   useInstagramEmbed(permalinks.length);
 

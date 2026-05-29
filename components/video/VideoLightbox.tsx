@@ -12,7 +12,7 @@ type Props = {
 
 // A focused player overlay: dim the room, drop the set into a cream-framed 16:9
 // stage, autoplay. Closes on backdrop click, the X, or Escape. Locks scroll
-// while open. Render-only beyond that - playback is YouTube's iframe.
+// while open. Render-only beyond that, playback is YouTube's iframe.
 export function VideoLightbox({ video, onClose }: Props) {
   useEffect(() => {
     if (!video) return;

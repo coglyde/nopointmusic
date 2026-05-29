@@ -17,7 +17,7 @@ export function RadioFeature({ show, onPlay }: Props) {
     <article className="grid grid-cols-1 items-center gap-10 border-t-2 border-accent pt-10 sm:grid-cols-[1.5fr_1fr] sm:gap-14">
       <PlayableThumb
         id={show.id}
-        alt={`${show.artist} - ${show.title}`}
+        alt={`${show.artist}, ${show.title}`}
         onPlay={() => onPlay(show)}
         feature
       />

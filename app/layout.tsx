@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Handwriting for instant-print captions. Scoped via the .font-hand utility - // used only on the polaroids, nowhere structural.
+// Handwriting for instant-print captions. Scoped via the .font-hand utility, // used only on the polaroids, nowhere structural.
 const caveat = Caveat({
   variable: "--font-hand",
   subsets: ["latin"],
@@ -22,7 +22,7 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   title: "nopointmusic",
-  description: "art for art - based in vancouver",
+  description: "art for art · based in vancouver",
 };
 
 const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`;

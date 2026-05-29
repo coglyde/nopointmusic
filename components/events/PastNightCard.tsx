@@ -19,7 +19,7 @@ export function PastNightCard({ event, onPlay }: Props) {
       {event.videoId ? (
         <PlayableThumb
           id={event.videoId}
-          alt={`${event.title} - ${event.venue}`}
+          alt={`${event.title}, ${event.venue}`}
           onPlay={() => onPlay(event)}
         />
       ) : (

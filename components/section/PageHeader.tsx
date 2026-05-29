@@ -22,7 +22,7 @@ export function PageHeader() {
 
         <Link
           href="/"
-          aria-label="nopointmusic - home"
+          aria-label="nopointmusic home"
           className="hidden justify-self-center sm:block"
         >
           <SpinningVinyl size={44} />

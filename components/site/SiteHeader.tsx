@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SpinningVinyl } from "@/components/site/SpinningVinyl";
+import { MobileMenu } from "@/components/site/MobileMenu";
 import { useScrolledPastHero } from "@/hooks/useScrolledPastHero";
 
 type Props = {
@@ -42,8 +43,8 @@ export function SiteHeader({ variant = "hero" }: Props) {
       <div className="relative grid grid-cols-3 items-center px-6 py-5 sm:px-10">
         <Link
           href="/"
-          aria-label="nopointmusic - home"
-          className={`site-logo justify-self-start ${overVideo ? "over-video" : ""}`}
+          aria-label="nopointmusic home"
+          className={`site-logo col-start-1 justify-self-start ${overVideo ? "over-video" : ""}`}
         >
           <Image
             src="/logos/text-logo-white.png"
@@ -62,19 +63,27 @@ export function SiteHeader({ variant = "hero" }: Props) {
           />
         </Link>
 
-        <div className="justify-self-center">
+        {/* Desktop: decorative scroll-spun record, centered. */}
+        <div className="col-start-2 hidden justify-self-center sm:block">
           <SpinningVinyl size={80} />
         </div>
 
-        <p
-          className={`hidden justify-self-end text-right font-mono text-[0.65rem] uppercase leading-relaxed tracking-[0.3em] sm:block ${
-            overVideo ? "text-white/70" : "text-ink-soft"
-          }`}
-        >
-          based in vancouver
-          <br />
-          est. 2024
-        </p>
+        <div className="col-start-3 justify-self-end">
+          <p
+            className={`hidden text-right font-mono text-[0.65rem] uppercase leading-relaxed tracking-[0.3em] sm:block ${
+              overVideo ? "text-white/70" : "text-ink-soft"
+            }`}
+          >
+            based in vancouver
+            <br />
+            est. 2024
+          </p>
+          {/* Mobile: the record is the menu trigger, top-right; it stays put
+              (above the drawer) and doubles as the close control. */}
+          <div className="sm:hidden">
+            <MobileMenu size={76} />
+          </div>
+        </div>
       </div>
     </header>
   );

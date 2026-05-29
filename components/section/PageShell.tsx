@@ -13,7 +13,7 @@ type Props = {
 
 // The cream-theme layout every interior page composes: sticky header, indexed
 // masthead, the page's own body, then the shared footer. Keeps each page file
-// down to its content - the chrome lives here.
+// down to its content, the chrome lives here.
 export function PageShell({ index, kicker, title, lede, children }: Props) {
   return (
     <div className="flex min-h-dvh flex-col bg-cream">

@@ -15,7 +15,7 @@ export function formatDate(iso: string): string {
   });
 }
 
-// "2026.04" - mono metadata stamp.
+// "2026.04", mono metadata stamp.
 export function formatStamp(iso: string): string {
   const d = atUtcNoon(iso);
   const month = String(d.getUTCMonth() + 1).padStart(2, "0");

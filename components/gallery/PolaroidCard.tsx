@@ -9,7 +9,7 @@ type Props = {
 
 // A single instant-print: the still in a thick white border with a handwritten
 // caption along the bottom. The physical object earns a soft shadow and a hair
-// of corner radius - it's a print on a table, not site chrome. Pure presentation;
+// of corner radius, it's a print on a table, not site chrome. Pure presentation;
 // the stack handles position and drag.
 export function PolaroidCard({ id, caption, meta }: Props) {
   return (

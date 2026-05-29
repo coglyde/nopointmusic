@@ -1,4 +1,4 @@
-// Releases - the catalogue. Newest first; the page renders them in array order.
+// Releases, the catalogue. Newest first; the page renders them in array order.
 //
 // SAMPLE DATA. The shape is real; the entries are on-brand placeholders so the
 // layout can be reviewed before the label drops in actual catalogue numbers,
@@ -11,7 +11,7 @@ export type Release = {
   catalogue: string; // e.g. "NP004"
   title: string;
   artist: string;
-  // ISO date - used for display and sort.
+  // ISO date, used for display and sort.
   releasedOn: string;
   format: string; // "Single" · "EP" · "VA" · "Mix"
   cover?: string; // /public path, optional

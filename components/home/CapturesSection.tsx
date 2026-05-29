@@ -12,7 +12,7 @@ const ITEMS: PolaroidItem[] = CAPTURES.map((v) => ({
   meta: `'${v.date.slice(2, 4)}`,
 }));
 
-// Home "from the floor" section: an editorial split - words on the left, a
+// Home "from the floor" section: an editorial split, words on the left, a
 // draggable pile of instant-prints on the right. Tap a print and the actual set
 // plays in a lightbox. This is the playful, tactile centerpiece; the rest of
 // the home stays quiet around it.
@@ -37,7 +37,7 @@ export function CapturesSection() {
 
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">
             Platform 9, Village Studios, Prospect Point, a New Year&apos;s set
-            that ran long. Shuffle the stack - tap a print to play the night
+            that ran long. Shuffle the stack. Tap a print to play the night
             back, recorded live and in full.
           </p>
 

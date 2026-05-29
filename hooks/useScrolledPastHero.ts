@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-// True once the user has scrolled below the full-viewport hero video - used to
+// True once the user has scrolled below the full-viewport hero video, used to
 // switch the header from clean/transparent to frosted. Threshold accounts for
 // the fixed header's height so the frost kicks in as the video leaves view.
 export function useScrolledPastHero() {

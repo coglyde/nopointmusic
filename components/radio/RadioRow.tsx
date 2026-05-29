@@ -15,7 +15,7 @@ export function RadioRow({ show, onPlay }: Props) {
       <div className="w-full">
         <PlayableThumb
           id={show.id}
-          alt={`${show.artist} - ${show.title}`}
+          alt={`${show.artist}, ${show.title}`}
           onPlay={() => onPlay(show)}
         />
       </div>

@@ -32,12 +32,12 @@ export function SiteFooter() {
             </a>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-ink-soft">
-            Bookings, demos, collaborations — or just to be in the room. We read
+            Bookings, demos, collaborations, or just to be in the room. We read
             everything.
           </p>
         </div>
 
-        {/* Columns — Index spans two so its six links sit in a 3×2 block */}
+        {/* Columns. Index spans two so its six links sit in a 3×2 block */}
         <div className="mt-14 grid grid-cols-2 gap-10 sm:grid-cols-4">
           <nav aria-label="Sections" className="sm:col-span-2">
             <p className="mb-4 font-mono text-[0.65rem] uppercase tracking-[0.3em] text-ink-soft">
@@ -72,7 +72,7 @@ export function SiteFooter() {
                 href={s.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex w-fit items-baseline gap-2 text-sm text-ink transition-colors hover:text-accent"
+                className="group flex w-fit flex-col gap-0.5 text-sm text-ink transition-colors hover:text-accent sm:flex-row sm:items-baseline sm:gap-2"
               >
                 {s.label}
                 <span className="font-mono text-[0.65rem] tracking-[0.1em] text-ink-soft transition-colors group-hover:text-accent">
@@ -94,19 +94,19 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Baseline — sits above the engraving, with room below for it */}
-        <div className="mt-16 flex flex-col gap-2 border-t border-ink/10 pb-44 pt-6 font-mono text-[0.6rem] uppercase tracking-[0.25em] text-ink-soft sm:flex-row sm:items-center sm:justify-between sm:pb-56">
+        {/* Baseline sits above the engraving, with room below for it */}
+        <div className="mt-16 flex flex-col gap-2 border-t border-ink/10 pb-28 pt-6 font-mono text-[0.6rem] uppercase tracking-[0.25em] text-ink-soft sm:flex-row sm:items-center sm:justify-between sm:pb-56">
           <span>art for art</span>
           <span>{ESTABLISHED}</span>
           <span>© {new Date().getFullYear()} No Point Music</span>
         </div>
       </div>
 
-      {/* Engraved wordmark — oversized, tone-on-tone, the descenders cropped by
+      {/* Engraved wordmark, oversized, tone-on-tone, the descenders cropped by
           the footer's bottom edge. Set in the body black weight. */}
       <span
         aria-hidden
-        className="text-engrave pointer-events-none absolute inset-x-0 bottom-0 z-0 block translate-y-[20%] select-none whitespace-nowrap text-center text-[15.5vw] font-black leading-[0.74] tracking-[-0.05em]"
+        className="text-engrave pointer-events-none absolute inset-x-0 bottom-0 z-0 block translate-y-[8%] select-none whitespace-nowrap text-center text-[17vw] font-black leading-[0.74] tracking-[-0.05em] sm:translate-y-[20%] sm:text-[15.5vw]"
       >
         nopointmusic
       </span>

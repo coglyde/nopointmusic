@@ -1,6 +1,6 @@
 import { youtubeThumb } from "@/lib/youtube";
 
-// The space. No Point's home is a real venue — an old warehouse they rebuilt
+// The space. No Point's home is a real venue, an old warehouse they rebuilt
 // into an artist-driven event space. This feature gives Platform 9 its own
 // block: a still from the room, the venue's own description, the build story,
 // and the numbers. Still is pulled from a real Platform 9 set on YouTube.
@@ -17,7 +17,7 @@ export function Platform9() {
     <section className="mt-28">
       <div className="mb-10 flex items-baseline gap-3 font-mono text-[0.7rem] uppercase tracking-[0.3em] text-ink-soft">
         <span className="text-accent">→</span>
-        <span>The space — operated under No Point Music</span>
+        <span>The space · operated under No Point Music</span>
       </div>
 
       <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-16">
@@ -25,7 +25,7 @@ export function Platform9() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={youtubeThumb(ROOM_VIDEO_ID)}
-            alt="Platform 9 — the room"
+            alt="Platform 9, the room"
             loading="lazy"
             className="absolute inset-0 h-full w-full object-cover"
           />
@@ -38,7 +38,7 @@ export function Platform9() {
 
           <p className="mt-6 text-lg leading-relaxed text-ink">
             An artist-driven venue built to serve as a home for music, dance,
-            and collective creation — space for independent promoters, curators,
+            and collective creation. Space for independent promoters, curators,
             and artists to host performances, workshops, exhibitions, and
             community events.
           </p>
@@ -47,7 +47,7 @@ export function Platform9() {
             From late-night dance floors to experimental showcases, Platform 9
             brings people together in the spirit of shared energy and raw
             expression. We took an old warehouse and built everything from the
-            ground up — no big budgets, just big dreams and hard work.
+            ground up. No big budgets, just big dreams and hard work.
           </p>
 
           <dl className="mt-9 grid grid-cols-3 gap-4 border-t border-ink/15 pt-6">

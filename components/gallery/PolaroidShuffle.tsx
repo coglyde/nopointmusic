@@ -18,7 +18,7 @@ type Props = {
 // Deterministic per-card tilt so SSR and client agree (no Math.random).
 const TILT = [-5, 4, -3, 6, -2, 3, -4, 2];
 
-// A draggable stack of instant-prints. Grab the top one and fling it - it sails
+// A draggable stack of instant-prints. Grab the top one and fling it, it sails
 // off and re-stacks at the back. A tap (no drag) opens that capture. Back cards
 // peek out, tilted, so the stack reads as a real pile of photos.
 export function PolaroidShuffle({ items, onOpen }: Props) {

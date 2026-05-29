@@ -1,4 +1,4 @@
-// Merch - treated as objects, not SKUs. v1 links out to wherever the item is
+// Merch, treated as objects, not SKUs. v1 links out to wherever the item is
 // sold (Big Cartel / Shopify / Bandcamp). The proposal's direct Stripe checkout
 // can replace the outbound `href` later without touching the layout.
 //
@@ -8,7 +8,7 @@
 export type Product = {
   slug: string;
   name: string;
-  // Free-text price, e.g. "$40 CAD" - keeps currency/format in the label.
+  // Free-text price, e.g. "$40 CAD", keeps currency/format in the label.
   price: string;
   // Short material / edition note shown as mono metadata.
   detail: string;
@@ -42,7 +42,7 @@ export const PRODUCTS: readonly Product[] = [
   },
   {
     slug: "np001-vinyl",
-    name: "NP001 - 12\"",
+    name: "NP001 · 12\"",
     price: "$30 CAD",
     detail: "Limited press · 180g · hand-stamped sleeve",
     soldOut: true,

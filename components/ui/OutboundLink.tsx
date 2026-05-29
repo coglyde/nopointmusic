@@ -8,7 +8,7 @@ type Props = {
 
 // A restrained outbound link: mono label, hairline rule, and a small NE arrow
 // that nudges on hover. Used everywhere the site points off-site (streaming,
-// tickets, stores). Brand red is reserved - this stays ink until hovered.
+// tickets, stores). Brand red is reserved, this stays ink until hovered.
 export function OutboundLink({ href, children, className = "" }: Props) {
   return (
     <a

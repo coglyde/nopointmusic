@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 // Tracks how far an element has travelled through the viewport's reading band
 // and returns progress 0→1. 0 while the element sits low on screen, 1 once it
-// has risen to the upper third - that travel is what drives a word-by-word
+// has risen to the upper third, that travel is what drives a word-by-word
 // reveal. rAF-throttled, passive listener, and respects reduced motion (jumps
 // straight to fully revealed).
 export function useScrollReveal<T extends HTMLElement>() {
@@ -21,7 +21,7 @@ export function useScrollReveal<T extends HTMLElement>() {
       "(prefers-reduced-motion: reduce)",
     ).matches;
     if (reduce) {
-      // Skip the reveal entirely - show fully lit. Deferred a frame so we're
+      // Skip the reveal entirely, show fully lit. Deferred a frame so we're
       // not setting state synchronously inside the effect body.
       frame = requestAnimationFrame(() => setProgress(1));
       return () => cancelAnimationFrame(frame);

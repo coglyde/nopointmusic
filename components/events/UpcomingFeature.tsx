@@ -35,7 +35,7 @@ function Feature({ event }: { event: NpEvent }) {
           {event.lineup.join(" · ")}
         </p>
         <p className="mt-1 font-mono text-[0.75rem] uppercase tracking-[0.18em] text-accent">
-          {event.venue} - {event.city}
+          {event.venue} · {event.city}
         </p>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-soft">
           {event.description}
@@ -50,7 +50,7 @@ function Feature({ event }: { event: NpEvent }) {
   );
 }
 
-// A-side: the next night, treated as a headline - oversized date and title,
+// A-side: the next night, treated as a headline, oversized date and title,
 // an accent rule across the top. Any further upcoming dates list quietly
 // beneath. Empty state stays composed rather than collapsing.
 export function UpcomingFeature() {

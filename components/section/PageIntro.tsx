@@ -10,7 +10,7 @@ type Props = {
 };
 
 // The masthead block at the top of each section: a small indexed kicker, a big
-// quiet title, and an optional lede. Generous top space - the page should open
+// quiet title, and an optional lede. Generous top space, the page should open
 // with air, per the design brief.
 export function PageIntro({ index, kicker, title, lede }: Props) {
   return (

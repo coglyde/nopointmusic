@@ -14,7 +14,7 @@ export default function NotFound() {
       </div>
 
       <p className="mt-10 font-mono text-[0.7rem] uppercase tracking-[0.35em] text-accent">
-        404 - run-out groove
+        404 · run-out groove
       </p>
 
       <h1 className="mt-4 text-4xl font-black uppercase leading-[1.02] tracking-[-0.02em] text-ink sm:text-6xl">
@@ -23,7 +23,7 @@ export default function NotFound() {
 
       <p className="mt-5 max-w-md text-base leading-relaxed text-ink-soft">
         The needle reached the end of the record and found nothing. This page
-        doesn&apos;t exist - but the rest of the deck does.
+        doesn&apos;t exist, but the rest of the deck does.
       </p>
 
       <nav

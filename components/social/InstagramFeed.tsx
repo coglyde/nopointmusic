@@ -37,7 +37,7 @@ export function InstagramFeed() {
         <div className="mt-10 flex flex-col items-start gap-5 py-10">
           <p className="max-w-lg text-lg leading-relaxed text-ink">
             The clearest picture of a night is the one taken in the room.
-            Photos, clips, and announcements live on Instagram - that&apos;s
+            Photos, clips, and announcements live on Instagram. That&apos;s
             where the collective talks first.
           </p>
           <OutboundLink href={INSTAGRAM_PROFILE}>

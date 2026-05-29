@@ -33,7 +33,7 @@ export function Manifesto() {
               A
             </span>
             lgorithms decide what you hear. Art became a fast consumption
-            product, and everything starts to sound the same - safe,
+            product, and everything starts to sound the same: safe,
             predictable, forgettable.
           </p>
 
@@ -59,7 +59,7 @@ export function Manifesto() {
             <p>
               So we opened our doors: <span className="text-ink">Platform 9</span>{" "}
               and <span className="text-ink">NOP Studios</span>. We took an old
-              warehouse and built everything from the ground up - no big budgets,
+              warehouse and built everything from the ground up. No big budgets,
               just big dreams and hard work. A year in, Platform 9 has hosted
               more than 90 events across a wide range of genres.
             </p>
@@ -67,7 +67,7 @@ export function Manifesto() {
 
           <blockquote className="my-12 border-l-2 border-brass pl-6 text-2xl font-medium leading-snug tracking-[-0.01em] text-ink">
             For the creators who feel all of this, our doors are open. Here your
-            art isn&apos;t a product - it&apos;s a statement.
+            art isn&apos;t a product. It&apos;s a statement.
           </blockquote>
 
           <p className="flex items-baseline gap-3 font-mono text-sm uppercase tracking-[0.25em] text-ink">

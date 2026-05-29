@@ -1,4 +1,4 @@
-// Pure helpers for YouTube content. No data here - just URL builders so every
+// Pure helpers for YouTube content. No data here, just URL builders so every
 // component derives thumbnails and watch links the same way.
 
 // 16:9-ish still. hqdefault always exists (unlike maxresdefault); we crop the
