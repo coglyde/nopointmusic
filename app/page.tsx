@@ -1,8 +1,10 @@
 import { Hero } from "@/components/hero/Hero";
+import { SiteHeader } from "@/components/site/SiteHeader";
 
 export default function Home() {
   return (
     <main className="relative">
+      <SiteHeader />
       <Hero />
 
       <section className="mx-auto max-w-2xl px-10 py-32 font-sans text-base leading-relaxed text-ink">
