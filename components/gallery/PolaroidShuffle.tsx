@@ -63,7 +63,7 @@ export function PolaroidShuffle({ items, onOpen }: Props) {
         })}
       </div>
 
-      <p className="font-mono text-[0.6rem] uppercase tracking-[0.25em] text-ink-soft/70">
+      <p className="font-mono text-[0.72rem] uppercase tracking-[0.28em] text-ink">
         drag to shuffle · tap to play
       </p>
     </div>

@@ -30,19 +30,15 @@ export function CapturesSection() {
           </div>
 
           <h2 className="mt-5 text-4xl font-black uppercase leading-[1.02] tracking-[-0.02em] text-ink sm:text-5xl">
-            Nights,
-            <br />
-            in hand.
+            Full sets
           </h2>
 
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">
-            Platform 9, Village Studios, Prospect Point, a New Year&apos;s set
-            that ran long. Shuffle the stack. Tap a print to play the night
-            back, recorded live and in full.
+            Recorded live and in full. Shuffle the stack. Tap a print to play.
           </p>
 
           <p className="mt-6 font-mono text-[0.65rem] uppercase tracking-[0.2em] text-ink-soft/70">
-            {ITEMS.length} captures · vancouver
+            {ITEMS.length} sets · vancouver
           </p>
         </div>
 

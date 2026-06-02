@@ -31,11 +31,11 @@ export function PolaroidCard({ id, caption, meta }: Props) {
       </div>
 
       <figcaption className="flex items-baseline justify-between gap-2 px-1 py-3">
-        <span className="font-hand text-2xl leading-none text-ink">
+        <span className="font-hand text-2xl leading-none text-[#181410]">
           {caption}
         </span>
         {meta ? (
-          <span className="font-mono text-[0.55rem] uppercase tracking-[0.15em] text-ink-soft">
+          <span className="font-mono text-[0.55rem] uppercase tracking-[0.15em] text-[#5a5048]">
             {meta}
           </span>
         ) : null}

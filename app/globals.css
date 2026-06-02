@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --cream: #efeae0;
-  --cream-deep: #e8e2d4;
+  --cream: #fafafa;
+  --cream-deep: #f0f0f0;
   --ink: #181410;
   --ink-soft: #5a5048;
   --brass: #b08947;
   --accent: #e51b18;
   /* Footer engraving, a hair LIGHTER than cream-deep so the wordmark reads as
      a faint deboss on light. */
-  --engrave: #f4efe6;
+  --engrave: #f5f5f5;
 }
 
 [data-theme="dark"] {

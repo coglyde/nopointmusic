@@ -16,7 +16,7 @@ export function HeroMenu({ onActive }: Props) {
       onMouseLeave={() => onActive(null)}
       className="flex flex-col"
     >
-      {NAV_ITEMS.map((item, i) => (
+      {NAV_ITEMS.map((item) => (
         <Link
           key={item.href}
           href={item.href}
@@ -24,14 +24,10 @@ export function HeroMenu({ onActive }: Props) {
           onFocus={() => onActive(item.Icon)}
           onBlur={() => onActive(null)}
           // Hide the native pointer over the word so the icon-cursor stands in.
-          className="group flex items-baseline gap-4 py-0.5 md:cursor-none"
+          className="group block py-0.5 md:cursor-none"
         >
-          <span className="font-mono text-xs tabular-nums text-white/45 transition-colors group-hover:text-accent">
-            {String(i + 1).padStart(2, "0")}
-          </span>
-          <span className="relative text-[2.6rem] font-black uppercase leading-[1.04] tracking-[-0.02em] text-white/95 transition-colors duration-200 group-hover:text-accent sm:text-6xl">
+          <span className="text-[2.6rem] font-black uppercase leading-[1.04] tracking-[-0.02em] text-white/95 transition-colors duration-200 group-hover:text-accent sm:text-6xl">
             {item.label}
-            <span className="absolute -bottom-0.5 left-0 h-[3px] w-0 bg-accent transition-all duration-300 ease-out group-hover:w-full" />
           </span>
         </Link>
       ))}

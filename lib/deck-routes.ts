@@ -9,7 +9,7 @@ export type NavItem = {
 export const NAV_ITEMS: readonly NavItem[] = [
   { label: "Music", href: "/music", groove: "music" },
   { label: "Events", href: "/events", groove: "events" },
-  { label: "Radio", href: "/radio", groove: "radio" },
   { label: "Foundations", href: "/foundations", groove: "foundations" },
   { label: "Merch", href: "/merch", groove: "merch" },
+  { label: "Radio", href: "/radio", groove: "radio" },
 ] as const;

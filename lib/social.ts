@@ -11,6 +11,7 @@ export type SocialLink = {
 };
 
 export const EMAIL = "info@nopointmusic.com";
+export const DEMO_EMAIL = "demo@nopointmusic.com";
 
 export const SOCIALS: readonly SocialLink[] = [
   {

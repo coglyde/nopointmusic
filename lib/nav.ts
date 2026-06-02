@@ -17,7 +17,7 @@ export type NavItem = {
 export const NAV_ITEMS: readonly NavItem[] = [
   { label: "Music", href: "/music", Icon: Music },
   { label: "Events", href: "/events", Icon: Ticket },
-  { label: "Radio", href: "/radio", Icon: Radio },
   { label: "Foundations", href: "/foundations", Icon: HeartHandshake },
   { label: "Merch", href: "/merch", Icon: ShoppingBag },
+  { label: "Radio", href: "/radio", Icon: Radio },
 ] as const;

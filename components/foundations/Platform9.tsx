@@ -14,12 +14,7 @@ const STATS = [
 
 export function Platform9() {
   return (
-    <section className="mt-28">
-      <div className="mb-10 flex items-baseline gap-3 font-mono text-[0.7rem] uppercase tracking-[0.3em] text-ink-soft">
-        <span className="text-accent">→</span>
-        <span>The space · operated under No Point Music</span>
-      </div>
-
+    <section>
       <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="relative aspect-[4/3] w-full overflow-hidden bg-ink">
           {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/nav";
-import { EMAIL, ESTABLISHED, LOCATION, SOCIALS } from "@/lib/social";
+import { EMAIL, DEMO_EMAIL, ESTABLISHED, LOCATION, SOCIALS } from "@/lib/social";
 
 // Site-wide footer for the interior + home. Opens on a compact CTA, then three
 // quiet columns (Index runs two-up so the six links don't tower). Behind it
@@ -30,6 +30,22 @@ export function SiteFooter() {
                 strokeWidth={2}
               />
             </a>
+
+            <div className="mt-10">
+              <p className="text-2xl font-black tracking-[-0.03em] text-ink sm:text-3xl">
+                Send your demo
+              </p>
+              <a
+                href={`mailto:${DEMO_EMAIL}`}
+                className="group mt-3 inline-flex items-center gap-2 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-ink-soft transition-colors hover:text-accent"
+              >
+                {DEMO_EMAIL}
+                <ArrowUpRight
+                  className="h-3.5 w-3.5 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  strokeWidth={2}
+                />
+              </a>
+            </div>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-ink-soft">
             Bookings, demos, collaborations, or just to be in the room. We read

@@ -5,5 +5,5 @@ export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
 
 export default function Image() {
-  return renderSectionOg({ kicker: "Manifesto · Platform 9", title: "Foundations" });
+  return renderSectionOg({ kicker: "The space", title: "Foundations" });
 }
