@@ -180,10 +180,13 @@ image is provided, omit the optional field (releases fall back to engraved vinyl
    ```
 5. Commit. End the commit message with the co-author trailer used in this repo.
 6. Open a PR referencing the issue (`Closes #<n>`). In the body, summarize what you
-   changed and any assumptions. CI re-runs the guardrails; on green it auto-merges
-   and the site deploys. A post-deploy smoke check (`scripts/smoke.mjs`) gates
-   promotion, with auto-rollback on failure.
-7. Comment the result back on the issue (PR link + live status).
+   changed and any assumptions. CI (`.github/workflows/checks.yml`) re-runs the
+   guardrails; on green the PR auto-merges.
+7. Deploy via `node scripts/deploy.mjs`: it builds a preview, smoke-checks it,
+   promotes that exact build to production, smoke-checks prod, and auto-rolls-back
+   on failure. (Set `VERCEL_AUTOMATION_BYPASS_SECRET` so the preview smoke can read
+   the protected preview URL.)
+8. Comment the result back on the issue (PR link + live status).
 
 ## When NOT to auto-ship
 

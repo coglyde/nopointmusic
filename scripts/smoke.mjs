@@ -29,12 +29,21 @@ const ROUTES = [
 
 const TIMEOUT_MS = 15000;
 
+// Preview deployments are gated by Vercel Deployment Protection. Set
+// VERCEL_AUTOMATION_BYPASS_SECRET (Project Settings -> Deployment Protection ->
+// Protection Bypass for Automation) so this check can read protected previews.
+// Production is public, so the header is simply ignored there.
+const bypass = process.env.VERCEL_AUTOMATION_BYPASS_SECRET;
+const headers = bypass
+  ? { "x-vercel-protection-bypass": bypass, "x-vercel-set-bypass-cookie": "true" }
+  : {};
+
 async function check({ path, marker }) {
   const url = base + path;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
-    const res = await fetch(url, { signal: controller.signal });
+    const res = await fetch(url, { signal: controller.signal, headers });
     if (!res.ok) return { path, ok: false, reason: `HTTP ${res.status}` };
     const body = await res.text();
     if (!body.includes(marker)) {
