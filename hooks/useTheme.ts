@@ -1,10 +1,17 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useSyncExternalStore } from "react";
 
 export type Theme = "light" | "dark";
 
 const STORAGE_KEY = "theme";
+
+// Theme lives on the <html> data-theme attribute (set by an inline script before
+// hydration to avoid a flash). This hook reads it via useSyncExternalStore so the
+// client subscribes to changes without a setState-in-effect: null on the server
+// and first hydration, the real theme immediately after.
+
+const listeners = new Set<() => void>();
 
 function readTheme(): Theme {
   const attr = document.documentElement.getAttribute("data-theme");
@@ -16,18 +23,23 @@ function applyTheme(next: Theme) {
   try {
     localStorage.setItem(STORAGE_KEY, next);
   } catch {}
+  listeners.forEach((notify) => notify());
+}
+
+function subscribe(notify: () => void) {
+  listeners.add(notify);
+  return () => listeners.delete(notify);
 }
 
 export function useTheme() {
-  const [theme, setThemeState] = useState<Theme | null>(null);
-
-  useEffect(() => {
-    setThemeState(readTheme());
-  }, []);
+  const theme = useSyncExternalStore<Theme | null>(
+    subscribe,
+    readTheme, // client snapshot
+    () => null, // server snapshot (no theme known until mounted)
+  );
 
   const setTheme = useCallback((next: Theme) => {
     applyTheme(next);
-    setThemeState(next);
   }, []);
 
   const toggle = useCallback(() => {

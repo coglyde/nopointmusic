@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "brand-lint": "node scripts/brand-lint.mjs",
+    "smoke": "node scripts/smoke.mjs"
   },
   "dependencies": {
     "gsap": "^3.15.0",
