@@ -34,9 +34,7 @@ const TIMEOUT_MS = 15000;
 // Protection Bypass for Automation) so this check can read protected previews.
 // Production is public, so the header is simply ignored there.
 const bypass = process.env.VERCEL_AUTOMATION_BYPASS_SECRET;
-const headers = bypass
-  ? { "x-vercel-protection-bypass": bypass, "x-vercel-set-bypass-cookie": "true" }
-  : {};
+const headers = bypass ? { "x-vercel-protection-bypass": bypass } : {};
 
 async function check({ path, marker }) {
   const url = base + path;
