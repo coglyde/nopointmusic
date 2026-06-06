@@ -6,40 +6,67 @@ export type Theme = "light" | "dark";
 
 const STORAGE_KEY = "theme";
 
-// Theme lives on the <html> data-theme attribute (set by an inline script before
-// hydration to avoid a flash). This hook reads it via useSyncExternalStore so the
-// client subscribes to changes without a setState-in-effect: null on the server
-// and first hydration, the real theme immediately after.
+// Default follows the OS (prefers-color-scheme). Once the user picks light or
+// dark, that choice is saved and sticks until they change it again.
 
 const listeners = new Set<() => void>();
+
+function storedTheme(): Theme | null {
+  try {
+    const value = localStorage.getItem(STORAGE_KEY);
+    return value === "light" || value === "dark" ? value : null;
+  } catch {
+    return null;
+  }
+}
+
+function systemTheme(): Theme {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+}
 
 function readTheme(): Theme {
   const attr = document.documentElement.getAttribute("data-theme");
   return attr === "dark" ? "dark" : "light";
 }
 
-function applyTheme(next: Theme) {
+function applyTheme(next: Theme, persist = false) {
   document.documentElement.setAttribute("data-theme", next);
-  try {
-    localStorage.setItem(STORAGE_KEY, next);
-  } catch {}
+  if (persist) {
+    try {
+      localStorage.setItem(STORAGE_KEY, next);
+    } catch {}
+  }
   listeners.forEach((notify) => notify());
 }
 
 function subscribe(notify: () => void) {
   listeners.add(notify);
-  return () => listeners.delete(notify);
+
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  const onSystemChange = () => {
+    if (!storedTheme()) {
+      applyTheme(mq.matches ? "dark" : "light");
+    }
+  };
+  mq.addEventListener("change", onSystemChange);
+
+  return () => {
+    listeners.delete(notify);
+    mq.removeEventListener("change", onSystemChange);
+  };
 }
 
 export function useTheme() {
   const theme = useSyncExternalStore<Theme | null>(
     subscribe,
-    readTheme, // client snapshot
-    () => null, // server snapshot (no theme known until mounted)
+    readTheme,
+    () => null,
   );
 
   const setTheme = useCallback((next: Theme) => {
-    applyTheme(next);
+    applyTheme(next, true);
   }, []);
 
   const toggle = useCallback(() => {

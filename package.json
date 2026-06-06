@@ -12,6 +12,7 @@
     "smoke": "node scripts/smoke.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "gsap": "^3.15.0",
     "howler": "^2.2.4",
     "lucide-react": "^1.17.0",

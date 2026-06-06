@@ -22,7 +22,7 @@ export function MobileMenu({ size = 80 }: { size?: number }) {
   const [spin, setSpin] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
   useScrollSpin(scrollRef);
-  const { theme, toggle } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   const toggleOpen = () => {
     setOpen((o) => !o);
@@ -114,18 +114,31 @@ export function MobileMenu({ size = 80 }: { size?: number }) {
         </nav>
 
         <div className="flex items-center justify-between border-t border-ink/15 pt-5">
-          <button
-            type="button"
-            onClick={toggle}
-            aria-label="Switch theme"
+          <div
+            role="group"
+            aria-label="Theme"
             className="font-mono text-[0.65rem] uppercase tracking-[0.3em] text-ink-soft"
           >
             <span className="opacity-60">[ </span>
-            <span className={theme === "light" ? "text-ink" : ""}>light</span>
+            <button
+              type="button"
+              onClick={() => setTheme("light")}
+              aria-pressed={theme === "light"}
+              className={`transition-colors ${theme === "light" ? "text-ink" : ""}`}
+            >
+              light
+            </button>
             <span className="opacity-60"> · </span>
-            <span className={theme === "dark" ? "text-ink" : ""}>dark</span>
+            <button
+              type="button"
+              onClick={() => setTheme("dark")}
+              aria-pressed={theme === "dark"}
+              className={`transition-colors ${theme === "dark" ? "text-ink" : ""}`}
+            >
+              dark
+            </button>
             <span className="opacity-60"> ]</span>
-          </button>
+          </div>
 
           <div className="flex items-center gap-5">
             {PRIMARY_SOCIALS.map((label) => {

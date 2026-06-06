@@ -3,22 +3,37 @@
 import { useTheme } from "@/hooks/useTheme";
 
 export function ThemeToggle() {
-  const { theme, toggle } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   return (
-    <button
-      type="button"
-      onClick={toggle}
-      aria-label={
-        theme ? `Switch to ${theme === "dark" ? "light" : "dark"} theme` : "Switch theme"
-      }
-      className="fixed bottom-6 right-6 z-30 hidden font-mono text-[0.65rem] uppercase tracking-[0.3em] text-ink-soft hover:text-ink transition-colors duration-200 select-none cursor-pointer sm:block"
+    <div
+      role="group"
+      aria-label="Theme"
+      className="fixed bottom-6 right-6 z-30 hidden font-mono text-[0.65rem] uppercase tracking-[0.3em] text-ink-soft select-none sm:block"
     >
       <span className="opacity-60">[ </span>
-      <span className={theme === "light" ? "text-ink" : ""}>light</span>
+      <button
+        type="button"
+        onClick={() => setTheme("light")}
+        aria-pressed={theme === "light"}
+        className={`cursor-pointer transition-colors duration-200 hover:text-ink ${
+          theme === "light" ? "text-ink" : ""
+        }`}
+      >
+        light
+      </button>
       <span className="opacity-60"> · </span>
-      <span className={theme === "dark" ? "text-ink" : ""}>dark</span>
+      <button
+        type="button"
+        onClick={() => setTheme("dark")}
+        aria-pressed={theme === "dark"}
+        className={`cursor-pointer transition-colors duration-200 hover:text-ink ${
+          theme === "dark" ? "text-ink" : ""
+        }`}
+      >
+        dark
+      </button>
       <span className="opacity-60"> ]</span>
-    </button>
+    </div>
   );
 }
