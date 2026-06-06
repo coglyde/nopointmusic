@@ -27,6 +27,7 @@ export const SPEED_KNOB = {
 export const ARM_ANGLE = {
   rest: -12,
   outer: 18,
+  about: 26,
   music: 26,
   events: 32,
   radio: 38,

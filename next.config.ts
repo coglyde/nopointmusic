@@ -10,6 +10,15 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "**.fbcdn.net" },
     ],
   },
+  // Music and Merch are hidden until they have real content. Send any direct
+  // visits home (temporary, so not a permanent redirect). Remove these two to
+  // bring the pages back.
+  async redirects() {
+    return [
+      { source: "/music", destination: "/", permanent: false },
+      { source: "/merch", destination: "/", permanent: false },
+    ];
+  },
 };
 
 export default nextConfig;

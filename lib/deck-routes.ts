@@ -6,10 +6,11 @@ export type NavItem = {
   groove: GrooveTarget;
 };
 
+// Music and Merch are temporarily hidden until they have real content. Re-add
+// them here (and in lib/nav.ts) to bring them back; their grooves still exist.
 export const NAV_ITEMS: readonly NavItem[] = [
-  { label: "Music", href: "/music", groove: "music" },
+  { label: "About", href: "/about", groove: "about" },
   { label: "Events", href: "/events", groove: "events" },
   { label: "Foundations", href: "/foundations", groove: "foundations" },
-  { label: "Merch", href: "/merch", groove: "merch" },
   { label: "Radio", href: "/radio", groove: "radio" },
 ] as const;

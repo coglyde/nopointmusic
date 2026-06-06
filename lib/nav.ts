@@ -1,9 +1,8 @@
 import {
-  Music,
+  Info,
   Ticket,
   Radio,
   HeartHandshake,
-  ShoppingBag,
   type LucideIcon,
 } from "lucide-react";
 
@@ -14,10 +13,11 @@ export type NavItem = {
   Icon: LucideIcon;
 };
 
+// Music and Merch are temporarily hidden until they have real content (their
+// routes redirect home, see next.config.ts). Re-add them here to bring them back.
 export const NAV_ITEMS: readonly NavItem[] = [
-  { label: "Music", href: "/music", Icon: Music },
+  { label: "About", href: "/about", Icon: Info },
   { label: "Events", href: "/events", Icon: Ticket },
   { label: "Foundations", href: "/foundations", Icon: HeartHandshake },
-  { label: "Merch", href: "/merch", Icon: ShoppingBag },
   { label: "Radio", href: "/radio", Icon: Radio },
 ] as const;
