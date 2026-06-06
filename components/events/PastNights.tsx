@@ -1,18 +1,15 @@
-"use client";
-
-import { useState } from "react";
-import { VideoLightbox } from "@/components/video/VideoLightbox";
-import { EVENTS, type NpEvent } from "@/lib/content/events";
+import type { NpEvent } from "@/lib/content/events";
 import { isUpcoming } from "@/lib/format";
 import { PastNightCard } from "./PastNightCard";
 
-// B-side: the archive. Past nights, most recent first, as a grid of captured
-// stills. Clicking a still plays that set/recap in the lightbox without leaving
-// the page. Owns the lightbox state for the whole archive.
-export function PastNights() {
-  const [open, setOpen] = useState<NpEvent | null>(null);
+type Props = {
+  events: readonly NpEvent[];
+};
 
-  const past = EVENTS.filter((e) => !isUpcoming(e.date)).sort((a, b) =>
+// B-side: the archive. Past nights, most recent first, each with its Eventbrite
+// flyer and a link back to the listing.
+export function PastNights({ events }: Props) {
+  const past = events.filter((e) => !isUpcoming(e.date)).sort((a, b) =>
     b.date.localeCompare(a.date),
   );
 
@@ -28,18 +25,9 @@ export function PastNights() {
 
       <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
         {past.map((event) => (
-          <PastNightCard key={event.slug} event={event} onPlay={setOpen} />
+          <PastNightCard key={event.slug} event={event} />
         ))}
       </div>
-
-      <VideoLightbox
-        video={
-          open?.videoId
-            ? { id: open.videoId, title: open.title, sub: open.lineup.join(" · ") }
-            : null
-        }
-        onClose={() => setOpen(null)}
-      />
     </section>
   );
 }
