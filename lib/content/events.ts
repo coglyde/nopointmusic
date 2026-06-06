@@ -14,6 +14,6 @@ export type NpEvent = {
   ticket?: string;
   // Eventbrite listing image (flyer / cover).
   imageUrl?: string;
-  // Set when sourced from Eventbrite — used for override lookups.
+  // Set when sourced from Eventbrite, used for override lookups.
   eventbriteId?: string;
 };

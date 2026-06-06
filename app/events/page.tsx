@@ -6,7 +6,7 @@ import { getEvents } from "@/lib/events";
 export const metadata: Metadata = {
   title: "Events · No Point Music",
   description:
-    "Upcoming and past No Point Music nights in Vancouver. Synced from Eventbrite — tickets and flyers link out.",
+    "Upcoming and past No Point Music nights in Vancouver. Synced from Eventbrite. Tickets and flyers link out.",
 };
 
 export default async function EventsPage() {
