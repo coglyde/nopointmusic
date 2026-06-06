@@ -20,9 +20,8 @@ if (!base) {
 // catch a page rendering the wrong content.
 const ROUTES = [
   { path: "/", marker: "No Point" },
+  { path: "/about", marker: "The collective" },
   { path: "/events", marker: "Events" },
-  { path: "/music", marker: "No Point" },
-  { path: "/merch", marker: "No Point" },
   { path: "/radio", marker: "No Point" },
   { path: "/foundations", marker: "No Point" },
 ];
