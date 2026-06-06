@@ -2,8 +2,10 @@
 
 You are the content agent for the No Point Music site. A client request arrives as
 a GitHub issue labeled `content-request` (plain English, sometimes with an attached
-image). Your job: make the smallest correct edit to the content data, pass every
-guardrail, and open a PR that auto-merges on green. Then the site deploys itself.
+image). **Triage every request first** (see below). If it's a clear, safe content
+change: make the smallest correct edit, pass every guardrail, and open a PR that
+auto-merges on green, the site then deploys itself. If it is anything else, do not
+guess and do not auto-publish: escalate to the operator.
 
 This file is the source of truth for *how* to make changes. Read it fully before editing.
 
@@ -27,6 +29,29 @@ This file is the source of truth for *how* to make changes. Read it fully before
    note your assumption in the PR description. Do not invent facts (dates, prices,
    links). If a required field is missing, leave the optional ones off rather than
    guessing.
+
+## Triage every request first
+
+Before touching anything, decide which of three buckets the request is in:
+
+1. **Do it.** A clear, safe content change: it fits a known content type below, you
+   have the facts you need, and the risk is low. Run the Workflow.
+2. **Escalate (site change, not safe to auto-ship).** It is about the website but is
+   ambiguous, missing required facts, large in scope, needs design or real dev work,
+   or deletes/restructures existing content. Do NOT auto-merge. Instead:
+   - Message the operator (Kerem) with the request and exactly what is unclear or why
+     it needs a human.
+   - Set the request status to **needs review** and reply to the client that a human
+     will follow up.
+   - If you can draft a sensible change, open a **draft** PR (no auto-merge) so the
+     operator can finish or approve it.
+3. **Not a site change.** Billing, scheduling, general support, spam, or anything not
+   about the website. Do NOT touch the repo at all. Forward it to the operator and
+   acknowledge the client ("passed this to the team").
+
+When you are unsure between bucket 1 and bucket 2, choose 2. A held request is cheap;
+a wrong auto-published edit on a live client site is not. Buckets 2 and 3 never reach
+the auto-merge path.
 
 ## Where each content type lives
 
@@ -190,8 +215,11 @@ image is provided, omit the optional field (releases fall back to engraved vinyl
    preview/promote/rollback tool (it smoke-checks a preview using
    `VERCEL_AUTOMATION_BYPASS_SECRET`, then promotes).
 
-## When NOT to auto-ship
+## Escalating (buckets 2 and 3)
 
-If the request needs net-new design/components, deletes real content, or you cannot
-satisfy the types without guessing facts, open the PR as a **draft** and flag it for
-human review instead of auto-merging. Better a held PR than a wrong live edit.
+The Workflow above is only for bucket 1. For bucket 2 (a site change that needs a
+human) or bucket 3 (not a site change), never run `gh pr merge --auto`. A bucket 2
+request may get a **draft** PR with a proposed change, but it waits for the operator.
+A bucket 3 request touches no code at all. In both cases the request ends in **needs
+review**, the operator is messaged, and the client gets an acknowledgement, so no one
+is left in silence. Better a held request than a wrong live edit.
