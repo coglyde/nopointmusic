@@ -1,5 +1,5 @@
 import { OutboundLink } from "@/components/ui/OutboundLink";
-import { EVENTS, type NpEvent } from "@/lib/content/events";
+import type { NpEvent } from "@/lib/content/events";
 import { isUpcoming } from "@/lib/format";
 
 function dayParts(iso: string) {
@@ -50,11 +50,15 @@ function Feature({ event }: { event: NpEvent }) {
   );
 }
 
+type Props = {
+  events: readonly NpEvent[];
+};
+
 // A-side: the next night, treated as a headline, oversized date and title,
 // an accent rule across the top. Any further upcoming dates list quietly
 // beneath. Empty state stays composed rather than collapsing.
-export function UpcomingFeature() {
-  const upcoming = EVENTS.filter((e) => isUpcoming(e.date)).sort((a, b) =>
+export function UpcomingFeature({ events }: Props) {
+  const upcoming = events.filter((e) => isUpcoming(e.date)).sort((a, b) =>
     a.date.localeCompare(b.date),
   );
 
