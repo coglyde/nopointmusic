@@ -179,14 +179,16 @@ image is provided, omit the optional field (releases fall back to engraved vinyl
    node scripts/brand-lint.mjs
    ```
 5. Commit. End the commit message with the co-author trailer used in this repo.
-6. Open a PR referencing the issue (`Closes #<n>`). In the body, summarize what you
-   changed and any assumptions. CI (`.github/workflows/checks.yml`) re-runs the
-   guardrails; on green the PR auto-merges.
-7. Deploy via `node scripts/deploy.mjs`: it builds a preview, smoke-checks it,
-   promotes that exact build to production, smoke-checks prod, and auto-rolls-back
-   on failure. (Set `VERCEL_AUTOMATION_BYPASS_SECRET` so the preview smoke can read
-   the protected preview URL.)
-8. Comment the result back on the issue (PR link + live status).
+6. Open a PR referencing the issue (`Closes #<n>`), summarizing the change and any
+   assumptions. Enable auto-merge: `gh pr merge <n> --auto --squash`.
+7. CI (`.github/workflows/checks.yml`) gates the merge: brand-lint, eslint,
+   typecheck, build (the build re-renders every static page, so a broken page fails
+   here). Green: GitHub merges and Vercel auto-deploys production. Red: the merge is
+   blocked; fix and push, or leave it for a human. Never bypass the gate.
+8. Comment the result back on the issue (PR link + live status). If a deploy goes
+   bad, `vercel rollback` reverts production; `scripts/deploy.mjs` is the manual
+   preview/promote/rollback tool (it smoke-checks a preview using
+   `VERCEL_AUTOMATION_BYPASS_SECRET`, then promotes).
 
 ## When NOT to auto-ship
 
