@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono, Caveat } from "next/font/google";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { THEME_INIT_SCRIPT } from "@/lib/theme-init";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -55,8 +57,6 @@ export const metadata: Metadata = {
   },
 };
 
-const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`;
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -69,11 +69,12 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
       <body className="min-h-full bg-cream text-ink">
         {children}
         <ThemeToggle />
+        <Analytics />
       </body>
     </html>
   );
