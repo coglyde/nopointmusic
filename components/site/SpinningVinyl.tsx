@@ -39,7 +39,7 @@ export function SpinningVinyl({
         style={driver === "auto" ? { animationDuration: `${spinSeconds}s` } : undefined}
       >
         <Image
-          src="/deck/vinyl.png"
+          src="/deck/vinyl-logo.png"
           alt=""
           aria-hidden
           fill
