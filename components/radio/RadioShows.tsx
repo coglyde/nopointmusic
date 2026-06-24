@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { VideoLightbox } from "@/components/video/VideoLightbox";
-import { RADIO_SHOWS, type Video } from "@/lib/content/youtube";
+import type { Video } from "@/lib/content/youtube";
+import { RADIO_SHOWS } from "@/lib/content/radio";
 import { RadioFeature } from "./RadioFeature";
 import { RadioRow } from "./RadioRow";
 

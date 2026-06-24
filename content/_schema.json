@@ -1,0 +1,39 @@
+{
+  "types": [
+    {
+      "key": "radio",
+      "label": "Radio plays",
+      "description": "Shows on the Radio page (newest first). Paste the YouTube video ID for each.",
+      "path": "content/radio.json",
+      "itemNoun": "show",
+      "min": 0,
+      "max": 100,
+      "fields": [
+        { "key": "artist", "label": "Artist", "type": "text", "placeholder": "Mr. Stee" },
+        { "key": "title", "label": "Show title", "type": "text", "placeholder": "No Point Radio" },
+        { "key": "id", "label": "YouTube video ID", "type": "text", "placeholder": "ayfYfOOaNXw" },
+        { "key": "date", "label": "Air date", "type": "date" },
+        { "key": "presentedBy", "label": "Presented by", "type": "text", "optional": true, "placeholder": "Parallel 49" }
+      ]
+    },
+    {
+      "key": "events",
+      "label": "Events",
+      "description": "Manually-added nights. These merge with the Eventbrite events on the Events page, newest first.",
+      "path": "content/events.json",
+      "itemNoun": "event",
+      "min": 0,
+      "max": 100,
+      "fields": [
+        { "key": "title", "label": "Title", "type": "text", "placeholder": "Summer Session" },
+        { "key": "date", "label": "Date", "type": "date" },
+        { "key": "venue", "label": "Venue", "type": "text", "placeholder": "Platform 9" },
+        { "key": "city", "label": "City", "type": "text", "placeholder": "Vancouver" },
+        { "key": "lineup", "label": "Lineup", "type": "stringList" },
+        { "key": "description", "label": "Description", "type": "textarea", "optional": true },
+        { "key": "ticket", "label": "Ticket link", "type": "url", "optional": true, "placeholder": "https://..." },
+        { "key": "imageUrl", "label": "Flyer image URL", "type": "url", "optional": true, "placeholder": "https://..." }
+      ]
+    }
+  ]
+}

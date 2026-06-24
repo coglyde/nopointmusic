@@ -1,4 +1,4 @@
-import type { NpEvent } from "@/lib/content/events";
+import { MANUAL_EVENTS, type NpEvent } from "@/lib/content/events";
 import { EVENT_OVERRIDES } from "@/lib/content/event-overrides";
 import {
   EVENTBRITE_ORGANIZER_ID,
@@ -14,20 +14,20 @@ function applyOverrides(event: NpEvent): NpEvent {
   return { ...event, ...patch };
 }
 
-// Pulls every live + past night from Eventbrite, merges optional copy overrides,
-// and returns newest-first. Without EVENTBRITE_PRIVATE_TOKEN the
-// list is empty and the page shows the quiet empty states.
+// Pulls every live + past night from Eventbrite, merges the manually-added
+// events and optional copy overrides, and returns newest-first. If Eventbrite is
+// unavailable the manual events still show; if both are empty the page shows the
+// quiet empty states.
 export async function getEvents(): Promise<NpEvent[]> {
+  let eventbrite: NpEvent[] = [];
   try {
     const raw = await fetchOrganizerEvents(
       process.env.EVENTBRITE_ORGANIZER_ID ?? EVENTBRITE_ORGANIZER_ID,
     );
-
-    return raw
-      .map((eb) => applyOverrides(mapEventbriteEvent(eb) as NpEvent))
-      .sort((a, b) => b.date.localeCompare(a.date));
+    eventbrite = raw.map((eb) => applyOverrides(mapEventbriteEvent(eb) as NpEvent));
   } catch (err) {
     console.error("[events] Eventbrite sync failed:", err);
-    return [];
   }
+
+  return [...MANUAL_EVENTS, ...eventbrite].sort((a, b) => b.date.localeCompare(a.date));
 }

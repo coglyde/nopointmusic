@@ -1,7 +1,8 @@
 // Real No Point Music video catalogue, pulled from youtube.com/@NoPointMusic.
-// Three are radio shows; the rest are full sets and recaps from real nights
-// (Platform9, Village Studios, Prospect Point, NYE). Titles are cleaned for
-// display; `id` is the real YouTube id, so thumbnails and embeds are live.
+// Full sets and recaps from real nights (Platform9, Village Studios, Prospect
+// Point, NYE). Radio shows live in content/radio.json (dashboard-editable).
+// Titles are cleaned for display; `id` is the real YouTube id, so thumbnails and
+// embeds are live.
 
 export type VideoKind = "radio" | "set" | "recap";
 
@@ -17,22 +18,6 @@ export type Video = {
 };
 
 export const VIDEOS: readonly Video[] = [
-  {
-    id: "ma2nB2DZxko",
-    title: "No Point Radio",
-    artist: "The Ryze",
-    kind: "radio",
-    date: "2026-06-01",
-    presentedBy: "Parallel 49",
-  },
-  {
-    id: "ayfYfOOaNXw",
-    title: "No Point Radio",
-    artist: "Mr. Stee",
-    kind: "radio",
-    date: "2026-05-19",
-    presentedBy: "Parallel 49",
-  },
   {
     id: "Hc_d9FSEz1g",
     title: "NYE 2026",
@@ -66,13 +51,6 @@ export const VIDEOS: readonly Video[] = [
     venue: "Village Studios",
   },
   {
-    id: "k9EMATKtFxM",
-    title: "No Point Radio Series",
-    artist: "Sotto Voce",
-    kind: "radio",
-    date: "2024-05-14",
-  },
-  {
     id: "29xKO4qgh_U",
     title: "Prospect Point",
     artist: "No Point Crew",
@@ -81,11 +59,6 @@ export const VIDEOS: readonly Video[] = [
     venue: "Prospect Point",
   },
 ];
-
-// Radio broadcasts only, newest first.
-export const RADIO_SHOWS: readonly Video[] = VIDEOS.filter(
-  (v) => v.kind === "radio",
-).sort((a, b) => b.date.localeCompare(a.date));
 
 // Full sets for the home polaroid shuffle. Add a video with kind: "set" to
 // VIDEOS above and it appears here automatically, newest first.
