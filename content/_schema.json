@@ -11,7 +11,7 @@
       "fields": [
         { "key": "artist", "label": "Artist", "type": "text", "placeholder": "Mr. Stee" },
         { "key": "title", "label": "Show title", "type": "text", "placeholder": "No Point Radio" },
-        { "key": "id", "label": "YouTube video ID", "type": "text", "placeholder": "ayfYfOOaNXw" },
+        { "key": "id", "label": "YouTube link", "type": "text", "placeholder": "https://youtu.be/ayfYfOOaNXw" },
         { "key": "date", "label": "Air date", "type": "date" },
         { "key": "presentedBy", "label": "Presented by", "type": "text", "optional": true, "placeholder": "Parallel 49" }
       ]
